@@ -1,0 +1,74 @@
+{
+  "subject": "Software Engineering (BCA Semester IV)",
+  "units": {
+    "unit1_system_analysis": {
+      "title": "System Analysis",
+      "topics": {
+        "definition": "A system is a group of interrelated components working together toward a central objective. System Analysis determines WHAT the system must do before coding begins.",
+        "elements": "Input, Processor, Output, Control, Feedback, Environment, Boundaries",
+        "characteristics": "Organization, Interaction, Interdependence, Integration, Central Objective",
+        "sdlc": "Requirement Gathering -> System Analysis -> System Design -> Coding/Implementation -> Testing -> Deployment -> Maintenance",
+        "modeling": "Creating visual blueprints (Flowcharts, DFDs) of the architecture",
+        "srs": "Software Requirement Specification - formal document listing all functional and non-functional requirements",
+        "srs_review": "Critical meeting to finalize SRS with stakeholders before development"
+      }
+    },
+    "unit2_dev_models": {
+      "title": "Development Models & Requirement Analysis",
+      "topics": {
+        "waterfall": "Strict, linear, sequential phases. Used for fixed-requirement projects. No going back once phase is done.",
+        "prototype": "Build dummy version -> Get Feedback -> Refine -> Build Final. Great for UI/UX clarity.",
+        "spiral": "Iterative loops focusing heavily on Risk Analysis. Used for large, critical systems. 4 phases: Planning, Risk Analysis, Engineering, Evaluation.",
+        "winwin_spiral": "Focuses on continuous negotiation between client and developer to meet budget and feature goals.",
+        "prototyping": "Visualizing features to extract accurate client needs",
+        "data_dictionary": "Master repository defining every data element (Metadata)",
+        "dfd": "Data Flow Diagram - Circles (Processes), Arrows (Data Flow), Rectangles (External Entities), Parallel Lines (Data Stores)"
+      }
+    },
+    "unit3_software_design": {
+      "title": "Software Design",
+      "topics": {
+        "definition": "Translating SRS into technical blueprint. Answers HOW the system will be built.",
+        "conceptual_design": "High-Level: Focuses on UI/UX, user interaction, overall system architecture",
+        "technical_design": "Low-Level: Focuses on Database Schema, API endpoints, specific algorithms",
+        "modular_design": "Breaking software into independent components (Auth Module, Payment Module, Booking Module)",
+        "cohesion": "HIGH is GOOD - degree to which elements inside a single module belong together. One module = one job.",
+        "coupling": "LOW is GOOD - degree of interdependence between different modules. Failure in one should not crash another."
+      }
+    },
+    "unit4_project_management": {
+      "title": "Software Project Management",
+      "topics": {
+        "objective": "Delivering software on time, within budget, with required quality",
+        "loc": "Lines of Code - estimating size based on code lines (Outdated method)",
+        "function_point": "Estimating size based on number of features/functions (Modern method)",
+        "cocomo": "Constructive Cost Model - mathematical formula for Effort (Person-Months) and Cost estimation",
+        "cocomo_categories": "Organic (Small/Simple), Semi-Detached (Medium like JaldiRide), Embedded (Highly Complex/Mission Critical)",
+        "risk_analysis": "Identification -> Projection (Probability & Impact) -> Management (Plan B) -> Monitoring",
+        "scheduling": "Using Gantt Charts to map tasks to timelines"
+      }
+    },
+    "unit5_testing": {
+      "title": "Software Testing",
+      "topics": {
+        "verification": "Are we building the product RIGHT? Checking code/design against SRS during development.",
+        "validation": "Are we building the RIGHT product? Checking if software solves user's real-world problem.",
+        "unit_testing": "Testing smallest individual function/component in isolation",
+        "integration_testing": "Combining modules and testing communication (Top-Down or Bottom-Up)",
+        "system_testing": "Testing fully integrated software including Performance (Load) and Security testing",
+        "oo_testing": "Object-Oriented Testing - focuses on Encapsulation and Inheritance testing",
+        "alpha_testing": "Conducted internally by developers/QA in controlled environment",
+        "beta_testing": "Conducted by small group of real external users in real-world conditions before launch"
+      }
+    }
+  },
+  "keywords": [
+    "software engineering", "sdlc", "waterfall", "spiral", "prototype", "srs",
+    "cohesion", "coupling", "cocomo", "dfd", "data flow", "testing",
+    "verification", "validation", "unit testing", "integration testing",
+    "alpha testing", "beta testing", "risk analysis", "function point",
+    "modular design", "system analysis", "requirement", "gantt chart",
+    "software design", "project management", "loc", "lines of code",
+    "system testing", "deployment", "maintenance", "data dictionary"
+  ]
+}

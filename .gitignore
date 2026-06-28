@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+audio/
+scratch/
+test_edge.mp3
+test.mp3
+*.log
+.env
+history.json
+quota.json

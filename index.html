@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavya - Living AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Three.js and VRM Dependencies -->
+    <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/@pixiv/three-vrm@1.0.10/lib/three-vrm.js"></script>
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+    <div id="errorOverlay" style="position:fixed;top:0;left:0;width:100%;background:rgba(255,0,0,0.8);color:white;z-index:999999;padding:20px;font-family:monospace;display:none;"></div>
+    <script>
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            var overlay = document.getElementById('errorOverlay');
+            overlay.style.display = 'block';
+            overlay.innerHTML += 'Error: ' + msg + '<br>Line: ' + lineNo + '<br><br>';
+            return false;
+        };
+        window.addEventListener("unhandledrejection", function(e) {
+            var overlay = document.getElementById('errorOverlay');
+            overlay.style.display = 'block';
+            overlay.innerHTML += 'Promise Error: ' + e.reason + '<br><br>';
+        });
+    </script>
+
+    <header class="top-bar">
+        <div class="logo"><i class="fa-solid fa-microchip"></i> KAVYA CORE</div>
+        <button id="teachMenuBtn" class="teach-menu-btn"><i class="fa-solid fa-brain"></i> Teach / Memory</button>
+    </header>
+
+    <div id="memoryPanel" class="memory-panel">
+        <button id="closeMemoryBtn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <h3><i class="fa-solid fa-graduation-cap"></i> Memory Bank</h3>
+        <p>Teach me facts permanently:</p>
+        <div class="fact-input">
+            <input type="text" id="factInput" placeholder="Fact...">
+            <button id="addFactBtn"><i class="fa-solid fa-plus"></i> Save</button>
+        </div>
+        <div id="memoryList" class="memory-list"></div>
+    </div>
+
+    <main class="center-stage">
+        <div class="character-container" id="characterContainer">
+            <canvas id="vrmCanvas"></canvas>
+            <div class="glow-aura" id="glowAura" style="display:none;"></div>
+        </div>
+
+        <div class="subtitle-container">
+            <p id="kavyaSubtitle" class="kavya-text">Kavya is waking up...</p>
+            <p id="userSubtitle" class="user-text hidden">...</p>
+        </div>
+    </main>
+
+    <div class="voice-dashboard">
+        <button id="micBtn" class="giant-mic"><i class="fa-solid fa-microphone"></i></button>
+        <p id="micStatus">Tap to Speak</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
